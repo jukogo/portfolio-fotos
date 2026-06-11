@@ -3,72 +3,70 @@ const title = "Portfolio fotográfico - Juan Carlos P.";
 const description =
   "Selección de fotografías en blanco y negro, ciudades, gente, macro, naturaleza y nocturnas.";
 
+// Usar siempre la misma base (dev y producción)
+const imgBase = "/portfolio-fotos/images";
+
 // BW
 const bwImages = [
-  "/images/BW/Jaume_Plensa_01.jpg",
-  "/images/BW/La_Mola_Menorca_01.jpg",
-  "/images/BW/La_Mola_Menorca_02.jpg",
-  "/images/BW/La_Mola_Menorca_03.jpg",
-  "/images/BW/Reflejo_01.jpg",
-  "/images/BW/Retrato_01.jpg",
-  "/images/BW/Retrato_02.jpg",
-  "/images/BW/Retrato_03.jpg",
-  "/images/BW/Retrato_04.jpg",
+  `${imgBase}/BW/Jaume_Plensa_01.jpg`,
+  `${imgBase}/BW/La_Mola_Menorca_01.jpg`,
+  `${imgBase}/BW/La_Mola_Menorca_02.jpg`,
+  `${imgBase}/BW/La_Mola_Menorca_03.jpg`,
+  `${imgBase}/BW/Reflejo_01.jpg`,
+  `${imgBase}/BW/Retrato_01.jpg`,
+  `${imgBase}/BW/Retrato_02.jpg`,
+  `${imgBase}/BW/Retrato_03.jpg`,
+  `${imgBase}/BW/Retrato_04.jpg`,
 ];
 
-// Ciudades
 const ciudadesImages = [
-  "/images/Ciudades/Calton_Hill_Edinburgh_ Scotland.jpg",
-  "/images/Ciudades/Catedral_de_Valencia_01.jpg",
-  "/images/Ciudades/Catedral_de_Valencia_02.jpg",
-  "/images/Ciudades/Ciutat_Vella_Valencia.jpg",
-  "/images/Ciudades/Ciutat_de_les_Arts_Valencia.jpg",
-  "/images/Ciudades/Puente_de_la_Exposicion_Valencia_01.jpg",
-  "/images/Ciudades/Puente_de_la_Exposicion_Valencia_02.jpg",
-  "/images/Ciudades/Puerta_del_Mar_Valencia.jpg",
-  "/images/Ciudades/Santa_Claus_Village_Rovaniemi_ Finland.jpg",
-  "/images/Ciudades/Spaccanapoli_Napoli_Italy.jpg",
-  "/images/Ciudades/St_Paul's_Cathedral_London_UK_01.jpg",
-  "/images/Ciudades/St_Paul's_Cathedral_London_UK_02.jpg",
-  "/images/Ciudades/Tobermory_Mull Island_Scotland).jpg",
+  `${imgBase}/Ciudades/Calton_Hill_Edinburgh_ Scotland.jpg`,
+  `${imgBase}/Ciudades/Catedral_de_Valencia_01.jpg`,
+  `${imgBase}/Ciudades/Catedral_de_Valencia_02.jpg`,
+  `${imgBase}/Ciudades/Ciutat_Vella_Valencia.jpg`,
+  `${imgBase}/Ciudades/Ciutat_de_les_Arts_Valencia.jpg`,
+  `${imgBase}/Ciudades/Puente_de_la_Exposicion_Valencia_01.jpg`,
+  `${imgBase}/Ciudades/Puente_de_la_Exposicion_Valencia_02.jpg`,
+  `${imgBase}/Ciudades/Puerta_del_Mar_Valencia.jpg`,
+  `${imgBase}/Ciudades/Santa_Claus_Village_Rovaniemi_ Finland.jpg`,
+  `${imgBase}/Ciudades/Spaccanapoli_Napoli_Italy.jpg`,
+  `${imgBase}/Ciudades/St_Paul's_Cathedral_London_UK_01.jpg`,
+  `${imgBase}/Ciudades/St_Paul's_Cathedral_London_UK_02.jpg`,
+  `${imgBase}/Ciudades/Tobermory_Mull Island_Scotland).jpg`,
 ];
 
-// Gente
 const genteImages = [
-  "/images/Gente/Menorca.jpg",
-  "/images/Gente/Scotland.jpg",
-  "/images/Gente/Valencia_01.jpg",
-  "/images/Gente/Valencia_02.jpg",
-  "/images/Gente/Valencia_03.jpg",
-  "/images/Gente/Valencia_04.jpg",
-  "/images/Gente/Valencia_05.jpg",
-  "/images/Gente/Valencia_06.jpg",
-  "/images/Gente/Valencia_07.jpg",
-  "/images/Gente/Valencia_08.jpg",
+  `${imgBase}/Gente/Menorca.jpg`,
+  `${imgBase}/Gente/Scotland.jpg`,
+  `${imgBase}/Gente/Valencia_01.jpg`,
+  `${imgBase}/Gente/Valencia_02.jpg`,
+  `${imgBase}/Gente/Valencia_03.jpg`,
+  `${imgBase}/Gente/Valencia_04.jpg`,
+  `${imgBase}/Gente/Valencia_05.jpg`,
+  `${imgBase}/Gente/Valencia_06.jpg`,
+  `${imgBase}/Gente/Valencia_07.jpg`,
+  `${imgBase}/Gente/Valencia_08.jpg`,
 ];
 
-// Macro
 const macroImages = [
-  "/images/Macro/Araña.jpg",
-  "/images/Macro/Hormiga.jpg",
+  `${imgBase}/Macro/Araña.jpg`,
+  `${imgBase}/Macro/Hormiga.jpg`,
 ];
 
-// Naturaleza
 const naturalezaImages = [
-  "/images/Naturaleza/Menorca_01.jpg",
-  "/images/Naturaleza/Menorca_02.jpg",
-  "/images/Naturaleza/Scotland_01.jpg",
-  "/images/Naturaleza/Scotland_02.jpg",
-  "/images/Naturaleza/Teruel_01.jpg",
-  "/images/Naturaleza/Teruel_02.jpg",
-  "/images/Naturaleza/Valencia_01.jpg",
-  "/images/Naturaleza/Valencia_02.jpg",
+  `${imgBase}/Naturaleza/Menorca_01.jpg`,
+  `${imgBase}/Naturaleza/Menorca_02.jpg`,
+  `${imgBase}/Naturaleza/Scotland_01.jpg`,
+  `${imgBase}/Naturaleza/Scotland_02.jpg`,
+  `${imgBase}/Naturaleza/Teruel_01.jpg`,
+  `${imgBase}/Naturaleza/Teruel_02.jpg`,
+  `${imgBase}/Naturaleza/Valencia_01.jpg`,
+  `${imgBase}/Naturaleza/Valencia_02.jpg`,
 ];
 
-// Nocturnas
 const nocturnasImages = [
-  "/images/Nocturnas/HD279230.jpg",
-  "/images/Nocturnas/M81.jpg",
+  `${imgBase}/Nocturnas/HD279230.jpg`,
+  `${imgBase}/Nocturnas/M81.jpg`,
 ];
 ---
 
@@ -264,4 +262,3 @@ const nocturnasImages = [
     </footer>
   </body>
 </html>
----
