@@ -3,70 +3,52 @@ const title = "Portfolio fotográfico - Juan Carlos P.";
 const description =
   "Selección de fotografías en blanco y negro, ciudades, gente, macro, naturaleza y nocturnas.";
 
-// Usar siempre la misma base (dev y producción)
+// Usar la misma base que en el resto del sitio
 const imgBase = "/portfolio-fotos/images";
 
-// BW
-const bwImages = [
-  `${imgBase}/BW/Jaume_Plensa_01.jpg`,
-  `${imgBase}/BW/La_Mola_Menorca_01.jpg`,
-  `${imgBase}/BW/La_Mola_Menorca_02.jpg`,
-  `${imgBase}/BW/La_Mola_Menorca_03.jpg`,
-  `${imgBase}/BW/Reflejo_01.jpg`,
-  `${imgBase}/BW/Retrato_01.jpg`,
-  `${imgBase}/BW/Retrato_02.jpg`,
-  `${imgBase}/BW/Retrato_03.jpg`,
-  `${imgBase}/BW/Retrato_04.jpg`,
-];
-
-const ciudadesImages = [
-  `${imgBase}/Ciudades/Calton_Hill_Edinburgh_ Scotland.jpg`,
-  `${imgBase}/Ciudades/Catedral_de_Valencia_01.jpg`,
-  `${imgBase}/Ciudades/Catedral_de_Valencia_02.jpg`,
-  `${imgBase}/Ciudades/Ciutat_Vella_Valencia.jpg`,
-  `${imgBase}/Ciudades/Ciutat_de_les_Arts_Valencia.jpg`,
-  `${imgBase}/Ciudades/Puente_de_la_Exposicion_Valencia_01.jpg`,
-  `${imgBase}/Ciudades/Puente_de_la_Exposicion_Valencia_02.jpg`,
-  `${imgBase}/Ciudades/Puerta_del_Mar_Valencia.jpg`,
-  `${imgBase}/Ciudades/Santa_Claus_Village_Rovaniemi_ Finland.jpg`,
-  `${imgBase}/Ciudades/Spaccanapoli_Napoli_Italy.jpg`,
-  `${imgBase}/Ciudades/St_Paul's_Cathedral_London_UK_01.jpg`,
-  `${imgBase}/Ciudades/St_Paul's_Cathedral_London_UK_02.jpg`,
-  `${imgBase}/Ciudades/Tobermory_Mull Island_Scotland).jpg`,
-];
-
-const genteImages = [
-  `${imgBase}/Gente/Menorca.jpg`,
-  `${imgBase}/Gente/Scotland.jpg`,
-  `${imgBase}/Gente/Valencia_01.jpg`,
-  `${imgBase}/Gente/Valencia_02.jpg`,
-  `${imgBase}/Gente/Valencia_03.jpg`,
-  `${imgBase}/Gente/Valencia_04.jpg`,
-  `${imgBase}/Gente/Valencia_05.jpg`,
-  `${imgBase}/Gente/Valencia_06.jpg`,
-  `${imgBase}/Gente/Valencia_07.jpg`,
-  `${imgBase}/Gente/Valencia_08.jpg`,
-];
-
-const macroImages = [
-  `${imgBase}/Macro/Araña.jpg`,
-  `${imgBase}/Macro/Hormiga.jpg`,
-];
-
-const naturalezaImages = [
-  `${imgBase}/Naturaleza/Menorca_01.jpg`,
-  `${imgBase}/Naturaleza/Menorca_02.jpg`,
-  `${imgBase}/Naturaleza/Scotland_01.jpg`,
-  `${imgBase}/Naturaleza/Scotland_02.jpg`,
-  `${imgBase}/Naturaleza/Teruel_01.jpg`,
-  `${imgBase}/Naturaleza/Teruel_02.jpg`,
-  `${imgBase}/Naturaleza/Valencia_01.jpg`,
-  `${imgBase}/Naturaleza/Valencia_02.jpg`,
-];
-
-const nocturnasImages = [
-  `${imgBase}/Nocturnas/HD279230.jpg`,
-  `${imgBase}/Nocturnas/M81.jpg`,
+const sections = [
+  {
+    id: "bw",
+    name: "Blanco y negro",
+    description: "Imágenes en blanco y negro con énfasis en textura, luz y contraste.",
+    href: "/portfolio-fotos/bw",
+    cover: `${imgBase}/BW/La_Mola_Menorca_01.jpg`,
+  },
+  {
+    id: "ciudades",
+    name: "Ciudades",
+    description: "Paisajes urbanos, arquitectura y escenas de calle.",
+    href: "/portfolio-fotos/ciudades",
+    cover: `${imgBase}/Ciudades/Ciutat_de_les_Arts_Valencia.jpg`,
+  },
+  {
+    id: "gente",
+    name: "Gente",
+    description: "Retratos, instantes cotidianos y escenas humanas.",
+    href: "/portfolio-fotos/gente",
+    cover: `${imgBase}/Gente/Valencia_01.jpg`,
+  },
+  {
+    id: "macro",
+    name: "Macro",
+    description: "Detalles y texturas a muy corta distancia.",
+    href: "/portfolio-fotos/macro",
+    cover: `${imgBase}/Macro/Araña.jpg`,
+  },
+  {
+    id: "naturaleza",
+    name: "Naturaleza",
+    description: "Paisajes, flora, fauna y escenas al aire libre.",
+    href: "/portfolio-fotos/naturaleza",
+    cover: `${imgBase}/Naturaleza/Menorca_01.jpg`,
+  },
+  {
+    id: "nocturnas",
+    name: "Nocturnas",
+    description: "Fotografía nocturna, luces de ciudad y cielos oscuros.",
+    href: "/portfolio-fotos/nocturnas",
+    cover: `${imgBase}/Nocturnas/M81.jpg`,
+  },
 ];
 ---
 
@@ -101,59 +83,46 @@ const nocturnasImages = [
       main {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 0 1rem 2rem;
-      }
-      nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.75rem;
-        margin-bottom: 2rem;
-      }
-      nav a {
-        color: #f5f5f5;
-        text-decoration: none;
-        border-radius: 999px;
-        padding: 0.4rem 0.9rem;
-        border: 1px solid #444;
-        font-size: 0.9rem;
-      }
-      nav a:hover {
-        background: #f5f5f5;
-        color: #111;
-      }
-      section.category {
-        margin-bottom: 2.5rem;
-      }
-      section.category h2 {
-        font-size: 1.8rem;
-        margin: 0 0 0.5rem;
-      }
-      section.category p {
-        margin: 0 0 1.2rem;
-        color: #b0b0b0;
-        font-size: 0.95rem;
+        padding: 0 1rem 2.5rem;
       }
       .grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 1rem;
+        gap: 1.5rem;
+        margin-top: 2rem;
       }
-      figure {
-        margin: 0;
-        overflow: hidden;
-        border-radius: 10px;
+      .card {
         background: #111;
+        border-radius: 12px;
+        overflow: hidden;
+        text-decoration: none;
+        color: inherit;
+        border: 1px solid #222;
+        display: flex;
+        flex-direction: column;
+        min-height: 100%;
       }
-      figure img {
+      .card img {
         width: 100%;
-        height: 100%;
-        display: block;
+        height: 180px;
         object-fit: cover;
+        display: block;
         transition: transform 0.25s ease-out;
       }
-      figure:hover img {
+      .card:hover img {
         transform: scale(1.03);
+      }
+      .card-body {
+        padding: 1rem 1.1rem 1.2rem;
+      }
+      .card-title {
+        font-size: 1.3rem;
+        margin: 0 0 0.4rem;
+      }
+      .card-desc {
+        margin: 0;
+        color: #b0b0b0;
+        font-size: 0.95rem;
       }
       footer {
         text-align: center;
@@ -161,10 +130,6 @@ const nocturnasImages = [
         font-size: 0.9rem;
         color: #9a9a9a;
         border-top: 1px solid #222;
-      }
-      @media (max-width: 600px) {
-        header { padding-top: 2rem; }
-        nav { gap: 0.5rem; }
       }
     </style>
   </head>
@@ -175,83 +140,16 @@ const nocturnasImages = [
     </header>
 
     <main>
-      <nav>
-        <a href="#bw">Blanco y negro</a>
-        <a href="#ciudades">Ciudades</a>
-        <a href="#gente">Gente</a>
-        <a href="#macro">Macro</a>
-        <a href="#naturaleza">Naturaleza</a>
-        <a href="#nocturnas">Nocturnas</a>
-      </nav>
-
-      <section class="category" id="bw">
-        <h2>Blanco y negro</h2>
-        <p>Imágenes en blanco y negro con énfasis en textura, luz y contraste.</p>
+      <section>
         <div class="grid">
-          {bwImages.map((src) => (
-            <figure>
-              <img src={src} alt="Fotografía en blanco y negro" loading="lazy" />
-            </figure>
-          ))}
-        </div>
-      </section>
-
-      <section class="category" id="ciudades">
-        <h2>Ciudades</h2>
-        <p>Paisajes urbanos, arquitectura y escenas de calle.</p>
-        <div class="grid">
-          {ciudadesImages.map((src) => (
-            <figure>
-              <img src={src} alt="Fotografía de ciudad" loading="lazy" />
-            </figure>
-          ))}
-        </div>
-      </section>
-
-      <section class="category" id="gente">
-        <h2>Gente</h2>
-        <p>Retratos, instantes cotidianos y escenas humanas.</p>
-        <div class="grid">
-          {genteImages.map((src) => (
-            <figure>
-              <img src={src} alt="Fotografía de gente" loading="lazy" />
-            </figure>
-          ))}
-        </div>
-      </section>
-
-      <section class="category" id="macro">
-        <h2>Macro</h2>
-        <p>Detalles y texturas a muy corta distancia.</p>
-        <div class="grid">
-          {macroImages.map((src) => (
-            <figure>
-              <img src={src} alt="Fotografía macro" loading="lazy" />
-            </figure>
-          ))}
-        </div>
-      </section>
-
-      <section class="category" id="naturaleza">
-        <h2>Naturaleza</h2>
-        <p>Paisajes, flora, fauna y escenas al aire libre.</p>
-        <div class="grid">
-          {naturalezaImages.map((src) => (
-            <figure>
-              <img src={src} alt="Fotografía de naturaleza" loading="lazy" />
-            </figure>
-          ))}
-        </div>
-      </section>
-
-      <section class="category" id="nocturnas">
-        <h2>Nocturnas</h2>
-        <p>Fotografía nocturna, luces de ciudad y cielos oscuros.</p>
-        <div class="grid">
-          {nocturnasImages.map((src) => (
-            <figure>
-              <img src={src} alt="Fotografía nocturna" loading="lazy" />
-            </figure>
+          {sections.map((section) => (
+            <a class="card" href={section.href}>
+              <img src={section.cover} alt={section.name} loading="lazy" />
+              <div class="card-body">
+                <h2 class="card-title">{section.name}</h2>
+                <p class="card-desc">{section.description}</p>
+              </div>
+            </a>
           ))}
         </div>
       </section>
