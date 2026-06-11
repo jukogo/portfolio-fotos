@@ -2,9 +2,8 @@
 const title = "Ciudades · Portfolio fotográfico - Juan Carlos P.";
 const description = "Paisajes urbanos, arquitectura y escenas de calle.";
 const imgBase = "/portfolio-fotos/images";
-
 const ciudadesImages = [
-  `${imgBase}/Ciudades/Calton_Hill_Edinburgh_ Scotland.jpg`,
+  `${imgBase}/Ciudades/Calton_Hill_Edinburgh_Scotland.jpg`,
   `${imgBase}/Ciudades/Catedral_de_Valencia_01.jpg`,
   `${imgBase}/Ciudades/Catedral_de_Valencia_02.jpg`,
   `${imgBase}/Ciudades/Ciutat_Vella_Valencia.jpg`,
@@ -12,15 +11,14 @@ const ciudadesImages = [
   `${imgBase}/Ciudades/Puente_de_la_Exposicion_Valencia_01.jpg`,
   `${imgBase}/Ciudades/Puente_de_la_Exposicion_Valencia_02.jpg`,
   `${imgBase}/Ciudades/Puerta_del_Mar_Valencia.jpg`,
-  `${imgBase}/Ciudades/Santa_Claus_Village_Rovaniemi_ Finland.jpg`,
+  `${imgBase}/Ciudades/Santa_Claus_Village_Rovaniemi_Finland.jpg`,
   `${imgBase}/Ciudades/Spaccanapoli_Napoli_Italy.jpg`,
   `${imgBase}/Ciudades/St_Paul's_Cathedral_London_UK_01.jpg`,
   `${imgBase}/Ciudades/St_Paul's_Cathedral_London_UK_02.jpg`,
-  `${im
-
+  `${imgBase}/Ciudades/Tobermory_Mull_Island_Scotland.jpg`,
+];
 const category = "Ciudades";
 ---
-
 <html lang="es">
   <head>
     <meta charset="utf-8" />
@@ -85,7 +83,6 @@ const category = "Ciudades";
       figure:hover img {
         transform: scale(1.03);
       }
-      /* Lightbox */
       .lightbox {
         position: fixed;
         inset: 0;
@@ -119,28 +116,24 @@ const category = "Ciudades";
       <h1>{category}</h1>
       <p>{description}</p>
     </header>
-
     <main>
       <section class="grid" id="gallery">
-        {images.map((src) => (
+        {ciudadesImages.map((src) => (
           <figure data-src={src}>
             <img src={src} alt={category} loading="lazy" />
           </figure>
         ))}
       </section>
     </main>
-
     <div class="lightbox" id="lightbox">
       <span class="lightbox-close" id="lightbox-close">&times;</span>
       <img id="lightbox-image" src="" alt={category} />
     </div>
-
     <script>
       const gallery = document.getElementById("gallery");
       const lightbox = document.getElementById("lightbox");
       const lightboxImg = document.getElementById("lightbox-image");
       const lightboxClose = document.getElementById("lightbox-close");
-
       if (gallery && lightbox && lightboxImg && lightboxClose) {
         gallery.addEventListener("click", (event) => {
           const figure = event.target.closest("figure");
@@ -150,14 +143,12 @@ const category = "Ciudades";
           lightboxImg.src = src;
           lightbox.classList.add("open");
         });
-
         lightbox.addEventListener("click", (event) => {
           if (event.target === lightbox || event.target === lightboxClose) {
             lightbox.classList.remove("open");
             lightboxImg.src = "";
           }
         });
-
         document.addEventListener("keydown", (event) => {
           if (event.key === "Escape") {
             lightbox.classList.remove("open");

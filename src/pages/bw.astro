@@ -2,7 +2,6 @@
 const title = "Blanco y negro · Portfolio fotográfico - Juan Carlos P.";
 const description = "Imágenes en blanco y negro con énfasis en textura, luz y contraste.";
 const imgBase = "/portfolio-fotos/images";
-
 const bwImages = [
   `${imgBase}/BW/Jaume_Plensa_01.jpg`,
   `${imgBase}/BW/La_Mola_Menorca_01.jpg`,
@@ -14,7 +13,6 @@ const bwImages = [
   `${imgBase}/BW/Retrato_03.jpg`,
   `${imgBase}/BW/Retrato_04.jpg`,
 ];
-
 const category = "Blanco y negro";
 ---
 
@@ -119,7 +117,7 @@ const category = "Blanco y negro";
 
     <main>
       <section class="grid" id="gallery">
-        {images.map((src) => (
+        {bwImages.map((src) => (
           <figure data-src={src}>
             <img src={src} alt={category} loading="lazy" />
           </figure>

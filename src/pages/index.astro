@@ -2,9 +2,69 @@
 const title = "Portfolio fotográfico - Juan Carlos P.";
 const description =
   "Selección de fotografías en blanco y negro, ciudades, gente, macro, naturaleza y nocturnas.";
-
-// Usar la misma base que en el resto del sitio
 const imgBase = "/portfolio-fotos/images";
+
+const bwImages = [
+  `${imgBase}/BW/Jaume_Plensa_01.jpg`,
+  `${imgBase}/BW/La_Mola_Menorca_01.jpg`,
+  `${imgBase}/BW/La_Mola_Menorca_02.jpg`,
+  `${imgBase}/BW/La_Mola_Menorca_03.jpg`,
+  `${imgBase}/BW/Reflejo_01.jpg`,
+  `${imgBase}/BW/Retrato_01.jpg`,
+  `${imgBase}/BW/Retrato_02.jpg`,
+  `${imgBase}/BW/Retrato_03.jpg`,
+  `${imgBase}/BW/Retrato_04.jpg`,
+];
+
+const ciudadesImages = [
+  `${imgBase}/Ciudades/Calton_Hill_Edinburgh_Scotland.jpg`,
+  `${imgBase}/Ciudades/Catedral_de_Valencia_01.jpg`,
+  `${imgBase}/Ciudades/Catedral_de_Valencia_02.jpg`,
+  `${imgBase}/Ciudades/Ciutat_Vella_Valencia.jpg`,
+  `${imgBase}/Ciudades/Ciutat_de_les_Arts_Valencia.jpg`,
+  `${imgBase}/Ciudades/Puente_de_la_Exposicion_Valencia_01.jpg`,
+  `${imgBase}/Ciudades/Puente_de_la_Exposicion_Valencia_02.jpg`,
+  `${imgBase}/Ciudades/Puerta_del_Mar_Valencia.jpg`,
+  `${imgBase}/Ciudades/Santa_Claus_Village_Rovaniemi_Finland.jpg`,
+  `${imgBase}/Ciudades/Spaccanapoli_Napoli_Italy.jpg`,
+  `${imgBase}/Ciudades/St_Paul's_Cathedral_London_UK_01.jpg`,
+  `${imgBase}/Ciudades/St_Paul's_Cathedral_London_UK_02.jpg`,
+  `${imgBase}/Ciudades/Tobermory_Mull_Island_Scotland.jpg`,
+];
+
+const genteImages = [
+  `${imgBase}/Gente/Menorca.jpg`,
+  `${imgBase}/Gente/Scotland.jpg`,
+  `${imgBase}/Gente/Valencia_01.jpg`,
+  `${imgBase}/Gente/Valencia_02.jpg`,
+  `${imgBase}/Gente/Valencia_03.jpg`,
+  `${imgBase}/Gente/Valencia_04.jpg`,
+  `${imgBase}/Gente/Valencia_05.jpg`,
+  `${imgBase}/Gente/Valencia_06.jpg`,
+  `${imgBase}/Gente/Valencia_07.jpg`,
+  `${imgBase}/Gente/Valencia_08.jpg`,
+];
+
+const macroImages = [
+  `${imgBase}/Macro/Araña.jpg`,
+  `${imgBase}/Macro/Hormiga.jpg`,
+];
+
+const naturalezaImages = [
+  `${imgBase}/Naturaleza/Menorca_01.jpg`,
+  `${imgBase}/Naturaleza/Menorca_02.jpg`,
+  `${imgBase}/Naturaleza/Scotland_01.jpg`,
+  `${imgBase}/Naturaleza/Scotland_02.jpg`,
+  `${imgBase}/Naturaleza/Teruel_01.jpg`,
+  `${imgBase}/Naturaleza/Teruel_02.jpg`,
+  `${imgBase}/Naturaleza/Valencia_01.jpg`,
+  `${imgBase}/Naturaleza/Valencia_02.jpg`,
+];
+
+const nocturnasImages = [
+  `${imgBase}/Nocturnas/HD279230.jpg`,
+  `${imgBase}/Nocturnas/M81.jpg`,
+];
 
 const sections = [
   {
@@ -69,21 +129,23 @@ const sections = [
         color: #f5f5f5;
       }
       header {
-        padding: 2.5rem 1rem 1rem;
-        text-align: center;
+        padding: 2rem 1rem 1.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
       }
       header h1 {
         font-size: clamp(2rem, 4vw, 2.8rem);
-        margin: 0 0 0.5rem;
+        margin: 0;
       }
       header p {
-        margin: 0;
+        margin: 0.5rem 0 0;
         color: #cccccc;
+        font-size: 1rem;
       }
       main {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 0 1rem 2.5rem;
+        padding: 0 1rem 2rem;
       }
       .grid {
         display: grid;
@@ -138,7 +200,6 @@ const sections = [
       <h1>{title}</h1>
       <p>{description}</p>
     </header>
-
     <main>
       <section>
         <div class="grid">
@@ -154,9 +215,8 @@ const sections = [
         </div>
       </section>
     </main>
-
     <footer>
-      &copy; {new Date().getFullYear()} Juan Carlos P. · Portfolio fotográfico
+      <p>Portfolio fotográfico - Juan Carlos P.</p>
     </footer>
   </body>
 </html>

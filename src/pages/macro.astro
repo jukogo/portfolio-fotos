@@ -2,12 +2,10 @@
 const title = "Macro · Portfolio fotográfico - Juan Carlos P.";
 const description = "Detalles y texturas a muy corta distancia.";
 const imgBase = "/portfolio-fotos/images";
-
 const macroImages = [
   `${imgBase}/Macro/Araña.jpg`,
   `${imgBase}/Macro/Hormiga.jpg`,
 ];
-
 const category = "Macro";
 ---
 
@@ -112,7 +110,7 @@ const category = "Macro";
 
     <main>
       <section class="grid" id="gallery">
-        {images.map((src) => (
+        {macroImages.map((src) => (
           <figure data-src={src}>
             <img src={src} alt={category} loading="lazy" />
           </figure>
